@@ -1,0 +1,108 @@
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
+local Window = Library.CreateLib("Teng Script / Marvel Enhance", "DarkTheme")
+
+local Tab1 = Window:NewTab("Main")
+
+local Section1 = Tab1:NewSection("Characters")
+
+Section:NewButton("Get All Characters", "This will unlocke even the gamepass chars", function()
+     local skin1 = game.Players.LocalPlayer.profile.ownedSkins.scarletWitch.cw:Clone()
+skin1.Parent = game.Players.LocalPlayer.profile.ownedSkins.scarletWitch
+skin1.Name = "ANAD"
+
+local skin2 = game.Players.LocalPlayer.profile.ownedSkins.scarletWitch.cw:Clone()
+skin2.Parent = game.Players.LocalPlayer.profile.ownedSkins.scarletWitch
+skin2.Name = "AUTS"
+
+local skin3 = game.Players.LocalPlayer.profile.ownedSkins.scarletWitch.cw:Clone()
+skin3.Parent = game.Players.LocalPlayer.profile.ownedSkins.scarletWitch
+skin3.Name = "classic"
+
+local skin4 = game.Players.LocalPlayer.profile.ownedSkins.scarletWitch.cw:Clone()
+skin4.Parent = game.Players.LocalPlayer.profile.ownedSkins.scarletWitch
+skin4.Name = "cwSuited"
+
+local skin5 = game.Players.LocalPlayer.profile.ownedSkins.scarletWitch.cw:Clone()
+skin5.Parent = game.Players.LocalPlayer.profile.ownedSkins.scarletWitch
+skin5.Name = "hellfireGala"
+
+local skin6 = game.Players.LocalPlayer.profile.ownedSkins.scarletWitch.cw:Clone()
+skin6.Parent = game.Players.LocalPlayer.profile.ownedSkins.scarletWitch
+skin6.Name = "romani"
+
+local skin7 = game.Players.LocalPlayer.profile.ownedSkins.scarletWitch.cw:Clone()
+skin7.Parent = game.Players.LocalPlayer.profile.ownedSkins.rogue
+skin7.Name = "90s"
+
+local skin8 = game.Players.LocalPlayer.profile.ownedSkins.scarletWitch.cw:Clone()
+skin8.Parent = game.Players.LocalPlayer.profile.ownedSkins.rogue
+skin8.Name = "foxSuited"
+
+local skin9 = game.Players.LocalPlayer.profile.ownedSkins.scarletWitch.cw:Clone()
+skin9.Parent = game.Players.LocalPlayer.profile.ownedSkins.rogue
+skin9.Name = "legacy"
+
+local skin10 = game.Players.LocalPlayer.profile.ownedSkins.scarletWitch.cw:Clone()
+skin10.Parent = game.Players.LocalPlayer.profile.ownedSkins.rogue
+skin10.Name = "savageLands"
+
+local skin11 = game.Players.LocalPlayer.profile.ownedSkins.scarletWitch.cw:Clone()
+skin11.Parent = game.Players.LocalPlayer.profile.ownedSkins.rogue
+skin11.Name = "xmenEvolution"
+
+local skin12 = game.Players.LocalPlayer.profile.ownedSkins.scarletWitch.cw:Clone()
+skin12.Parent = game.Players.LocalPlayer.profile.ownedSkins.storm
+skin12.Name = "90s"
+
+local skin13 = game.Players.LocalPlayer.profile.ownedSkins.scarletWitch.cw:Clone()
+skin13.Parent = game.Players.LocalPlayer.profile.ownedSkins.storm
+skin13.Name = "Fox's X-men 2 (Suited)"
+
+local skin14 = game.Players.LocalPlayer.profile.ownedSkins.scarletWitch.cw:Clone()
+skin14.Parent = game.Players.LocalPlayer.profile.ownedSkins.storm
+skin14.Name = "Marvel Now!"
+
+local skin15 = game.Players.LocalPlayer.profile.ownedSkins.scarletWitch.cw:Clone()
+skin15.Parent = game.Players.LocalPlayer.profile.ownedSkins.storm
+skin15.Name = "fox"
+
+local skin16 = game.Players.LocalPlayer.profile.ownedSkins.scarletWitch.cw:Clone()
+skin16.Parent = game.Players.LocalPlayer.profile.ownedSkins.storm
+skin16.Name = "foxSuited"
+local skin12 = game.Players.LocalPlayer.profile.ownedSkins.scarletWitch.cw:Clone()
+skin12.Parent = game.Players.LocalPlayer.profile.ownedSkins.storm
+skin12.Name = "90s"
+
+local skin13 = game.Players.LocalPlayer.profile.ownedSkins.scarletWitch.cw:Clone()
+skin13.Parent = game.Players.LocalPlayer.profile.ownedSkins.storm
+skin13.Name = "Fox's X-men 2 (Suited)"
+
+local skin14 = game.Players.LocalPlayer.profile.ownedSkins.scarletWitch.cw:Clone()
+skin14.Parent = game.Players.LocalPlayer.profile.ownedSkins.storm
+skin14.Name = "Marvel Now!"
+
+local skin15 = game.Players.LocalPlayer.profile.ownedSkins.scarletWitch.cw:Clone()
+skin15.Parent = game.Players.LocalPlayer.profile.ownedSkins.storm
+skin15.Name = "fox"
+
+local skin16 = game.Players.LocalPlayer.profile.ownedSkins.scarletWitch.cw:Clone()
+skin16.Parent = game.Players.LocalPlayer.profile.ownedSkins.storm
+skin16.Name = "foxSuited"
+
+
+local skin17 = game.Players.LocalPlayer.profile.ownedSkins.scarletWitch.cw:Clone()
+skin17.Parent = game.Players.LocalPlayer.profile.ownedSkins.storm
+skin17.Name = "legacy"
+
+local skin18 = game.Players.LocalPlayer.profile.ownedSkins.scarletWitch.cw:Clone()
+skin18.Parent = game.Players.LocalPlayer.profile.ownedSkins.storm
+skin18.Name = "marvelNow"
+
+local skin18 = game.Players.LocalPlayer.profile.ownedSkins.scarletWitch.cw:Clone()
+skin18.Parent = game.Players.LocalPlayer.profile.ownedSkins.storm
+skin18.Name = "savageLands"
+
+local skin19 = game.Players.LocalPlayer.profile.ownedSkins.scarletWitch.cw:Clone()
+skin19.Parent = game.Players.LocalPlayer.profile.ownedSkins.storm
+skin19.Name = "xmen97"
+end)
