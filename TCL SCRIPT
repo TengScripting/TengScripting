@@ -25,9 +25,10 @@ local Tab2 = Window:NewTab("Powers")
 local Section2 = Tab2:NewSection("Abilities")
 local PowerSection = Tab2:NewSection("Remove Your Abilities")
 
-PowerSection:NewKeybind("Remove Your Current Ability", "KeybindInfo", Enum.KeyCode.Z, function()
-	game.Players.LocalPlayer.Character.Abilities:Destroy()
+PowerSection:NewButton("Remove Your Current Ability", "ButtonInfo", function()
+    game.Players.LocalPlayer.Character.Abilities:Destroy()
 end)
+
 
 Section2:NewKeybind("Disentigeration", "KeybindInfo", Enum.KeyCode.Z, function()
 	local LocalPlayer = game.Players.LocalPlayer
