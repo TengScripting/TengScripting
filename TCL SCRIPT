@@ -47,7 +47,7 @@ Section2:NewKeybind("Flaming", "KeybindInfo", Enum.KeyCode.X, function()
 	local LocalPlayer = game.Players.LocalPlayer
     local Character_upvr = LocalPlayer.Character
     local mouse_upvr = LocalPlayer:GetMouse()
-    local PowerEvent_upvr = game:GetService("ReplicatedStorage"):WaitForChild("PowerEvents"):WaitForChild("EvilPhoebe"):WaitForChild("PowerEvent")
+    local PowerEvent_upvr = game:GetService("ReplicatedStorage").PowerEvents.EvilPhoebe.PowerEvent
     PowerEvent_upvr:FireServer("Flaming", Character, mouse_upvr.Hit.Position)
 end)
 
