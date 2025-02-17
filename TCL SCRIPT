@@ -30,7 +30,7 @@ PowerSection:NewButton("Remove Your Current Ability", "ButtonInfo", function()
 end)
 
 
-Section2:NewKeybind("Disentigeration", "KeybindInfo", Enum.KeyCode.Z, function()
+Section2:NewKeybind("Disentigeration", "KeybindInfo", Enum.KeyCode.E, function()
 	local LocalPlayer = game.Players.LocalPlayer
     local Character_upvr = LocalPlayer.Character
     local mouse_upvr = LocalPlayer:GetMouse()
@@ -43,7 +43,7 @@ end)
 
 
 
-Section2:NewKeybind("Mass Control", "KeybindInfo", Enum.KeyCode.X, function()
+Section2:NewKeybind("Mass Control", "KeybindInfo", Enum.KeyCode.R, function()
 	local LocalPlayer = game.Players.LocalPlayer
     local Character_upvr = LocalPlayer.Character
     local mouse_upvr = LocalPlayer:GetMouse()
@@ -51,7 +51,7 @@ Section2:NewKeybind("Mass Control", "KeybindInfo", Enum.KeyCode.X, function()
     PowerEvent_upvr:FireServer("MassControl", Character_upvr, mouse_upvr.Target.Parent:FindFirstChild("HumanoidRootPart"))
 end)
 
-Section2:NewKeybind("HeartOrbing", "KeybindInfo", Enum.KeyCode.C, function()
+Section2:NewKeybind("HeartOrbing", "KeybindInfo", Enum.KeyCode.T, function()
 	local LocalPlayer = game.Players.LocalPlayer
 	local Character_upvr = LocalPlayer.Character
 	local mouse_upvr = LocalPlayer:GetMouse()
@@ -59,7 +59,7 @@ Section2:NewKeybind("HeartOrbing", "KeybindInfo", Enum.KeyCode.C, function()
 	 PowerEvent_upvr:FireServer("HeartOrbing", Character_upvr, mouse_upvr.Target.Parent:FindFirstChild("HumanoidRootPart"))
 end)
 
-Section2:NewKeybind("ElectronicLift", "KeybindInfo", Enum.KeyCode.V, function()
+Section2:NewKeybind("ElectronicLift", "KeybindInfo", Enum.KeyCode.Y, function()
 	local LocalPlayer = game.Players.LocalPlayer
 	local Character_upvr = LocalPlayer.Character
 	local mouse_upvr = LocalPlayer:GetMouse()
@@ -69,19 +69,19 @@ Section2:NewKeybind("ElectronicLift", "KeybindInfo", Enum.KeyCode.V, function()
 end)
 
 
-Section2:NewKeybind("Earthquake", "KeybindInfo", Enum.KeyCode.B, function()
+Section2:NewKeybind("Earthquake", "KeybindInfo", Enum.KeyCode.F, function()
 	local Character_upvr = game.Players.LocalPlayer.Character
 	local PowerEvent_upvr = game:GetService("ReplicatedStorage").PowerEvents.Prue.PowerEvent
  	PowerEvent_upvr:FireServer("Earthquake", Character_upvr)
 end)
 
-Section2:NewKeybind("Bone Break", "KeybindInfo", Enum.KeyCode.B, function()
+Section2:NewKeybind("Bone Break", "KeybindInfo", Enum.KeyCode.G, function()
 	local Character_upvr = game.Players.LocalPlayer.Character
 	local PowerEvent_upvr = game:GetService("ReplicatedStorage").PowerEvents.Prue.PowerEvent
 	PowerEvent_upvr:FireServer("BoneBreak", Character_upvr, mouse_upvr.Target.Parent:FindFirstChild("HumanoidRootPart"))
 end)
 
-Section2:NewKeybind("Lightning Strike", "KeybindInfo", Enum.KeyCode.B, function()
+Section2:NewKeybind("Lightning Strike", "KeybindInfo", Enum.KeyCode.H, function()
 	local LocalPlayer = game.Players.LocalPlayer
 	local Character_upvr = LocalPlayer.Character
 	local mouse_upvr = LocalPlayer:GetMouse()
@@ -90,7 +90,7 @@ Section2:NewKeybind("Lightning Strike", "KeybindInfo", Enum.KeyCode.B, function(
 	 PowerEvent_upvr:FireServer("LightningStrike", Character_upvr, mouse_upvr.Target.Parent:FindFirstChild("HumanoidRootPart"))
 end)
 
-Section2:NewKeybind("Combust Orbing", "KeybindInfo", Enum.KeyCode.B, function()
+Section2:NewKeybind("Combust Orbing", "KeybindInfo", Enum.KeyCode.Z, function()
 	local LocalPlayer = game.Players.LocalPlayer
 	local Character_upvr = LocalPlayer.Character
 	local mouse_upvr = LocalPlayer:GetMouse()
@@ -98,14 +98,14 @@ Section2:NewKeybind("Combust Orbing", "KeybindInfo", Enum.KeyCode.B, function()
  	PowerEvent_upvr:FireServer("CombustiveOrbing", Character_upvr, mouse_upvr.Target.Parent:FindFirstChild("HumanoidRootPart"))
 end)
 
-Section2:NewKeybind("Projection", "KeybindInfo", Enum.KeyCode.B, function()
+Section2:NewKeybind("Projection", "KeybindInfo", Enum.KeyCode.X, function()
 	local LocalPlayer_upvr = game:GetService("Players").LocalPlayer
 	local mouse_upvr = LocalPlayer_upvr:GetMouse()
 	local PowerEvent_upvr = game:GetService("ReplicatedStorage"):WaitForChild("PowerEvents"):WaitForChild("Wyatt"):WaitForChild("PowerEvent")
 	PowerEvent_upvr:FireServer("Projection", Character, mouse_upvr.Hit.Position)
 end)
 
-Section2:NewKeybind("Scream", "KeybindInfo", Enum.KeyCode.B, function()
+Section2:NewKeybind("Scream", "KeybindInfo", Enum.KeyCode.C, function()
 	local Character_upvr = game.Players.LocalPlayer.Character
 	local PowerEvent_upvr = game:GetService("ReplicatedStorage").PowerEvents.EvilPhoebe.PowerEvent
 	 PowerEvent_upvr:FireServer("Scream", Character_upvr)	
