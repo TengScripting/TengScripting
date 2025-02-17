@@ -98,6 +98,13 @@ Section2:NewKeybind("Combust Orbing", "KeybindInfo", Enum.KeyCode.B, function()
  	PowerEvent_upvr:FireServer("CombustiveOrbing", Character_upvr, mouse_upvr.Target.Parent:FindFirstChild("HumanoidRootPart"))
 end)
 
+Section2:NewKeybind("Projection", "KeybindInfo", Enum.KeyCode.B, function()
+	local LocalPlayer_upvr = game:GetService("Players").LocalPlayer
+	local mouse_upvr = LocalPlayer_upvr:GetMouse()
+	local PowerEvent_upvr = game:GetService("ReplicatedStorage"):WaitForChild("PowerEvents"):WaitForChild("Wyatt"):WaitForChild("PowerEvent")
+	PowerEvent_upvr:FireServer("Projection", Character, mouse_upvr.Hit.Position)
+end)
+
 
 
 local Tab5 = Window:NewTab("Settings")
