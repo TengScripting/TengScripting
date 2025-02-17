@@ -69,6 +69,15 @@ Section2:NewKeybind("ElectronicLift", "KeybindInfo", Enum.KeyCode.C, function()
 end)
 
 
+Section2:NewKeybind("ElectronicLift", "KeybindInfo", Enum.KeyCode.C, function()
+	local LocalPlayer = game.Players.LocalPlayer
+	local Character_upvr = LocalPlayer.Character
+	local mouse_upvr = LocalPlayer:GetMouse()
+	local PowerEvent_upvr = game:GetService("ReplicatedStorage").PowerEvents.Paige.PowerEvent
+	PowerEvent_upvr:FireServer("Orbing", Character, mouse_upvr.Hit.Position)
+end)
+
+
 
 
 
