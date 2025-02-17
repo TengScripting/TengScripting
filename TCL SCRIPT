@@ -105,6 +105,12 @@ Section2:NewKeybind("Projection", "KeybindInfo", Enum.KeyCode.B, function()
 	PowerEvent_upvr:FireServer("Projection", Character, mouse_upvr.Hit.Position)
 end)
 
+Section2:NewKeybind("Scream", "KeybindInfo", Enum.KeyCode.B, function()
+	local Character_upvr = game.Players.LocalPlayer.Character
+	local PowerEvent_upvr = game:GetService("ReplicatedStorage").PowerEvents.EvilPhoebe.PowerEvent
+	 PowerEvent_upvr:FireServer("Scream", Character_upvr)	
+end)
+
 
 
 local Tab5 = Window:NewTab("Settings")
