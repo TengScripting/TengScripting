@@ -1,0 +1,34 @@
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
+local Window = Library.CreateLib("TCL SCRIPT / BY TENGSCRIPT", "DarkTheme")
+
+local Tab1 = Window:NewTab("Characters")
+local Section1 = Tab1:NewSection("Characters")
+
+
+Section1:NewButton("Prue", "ButtonInfo", function()
+    game.ReplicatedStorage.Events.Select:FireServer("Prue Halliwell")
+end)
+
+Section1:NewButton("Piper", "ButtonInfo", function()
+    game.ReplicatedStorage.Events.Select:FireServer("Piper Halliwell")
+end)
+
+Section1:NewButton("Phoebe", "ButtonInfo", function()
+    game.ReplicatedStorage.Events.Select:FireServer("Phoebe Halliwell")
+end)
+
+Section1:NewButton("Paige", "ButtonInfo", function()
+    game.ReplicatedStorage.Events.Select:FireServer("Paige Matthews")
+end)
+
+local Tab2 = Window:NewTab("Powers")
+local Section2 = Tab2:NewSection("Abilities")
+
+Section2:NewKeybind("Source Disentigeration", "KeybindInfo", Enum.KeyCode.Z, function()
+	local LocalPlayer = game.Players.LocalPlayer
+    local Character_upvr = LocalPlayer.Character
+    local mouse_upvr = LocalPlayer:GetMouse()
+    local PowerEvent_upvr = game:GetService("ReplicatedStorage").PowerEvents.Wyatt.PowerEvent
+    PowerEvent_upvr:FireServer("Disintegration", Character_upvr, mouse_upvr.Target.Parent:FindFirstChild("HumanoidRootPart"))
+end)
+  
