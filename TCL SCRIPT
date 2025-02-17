@@ -35,7 +35,7 @@ Section2:NewKeybind("Disentigeration", "KeybindInfo", Enum.KeyCode.Z, function()
 end)
 
 
-Section2:NewKeybind("Mass Control", "KeybindInfo", Enum.KeyCode.Q, function()
+Section2:NewKeybind("Mass Control", "KeybindInfo", Enum.KeyCode.X, function()
 	local LocalPlayer = game.Players.LocalPlayer
     local Character_upvr = LocalPlayer.Character
     local mouse_upvr = LocalPlayer:GetMouse()
@@ -43,14 +43,22 @@ Section2:NewKeybind("Mass Control", "KeybindInfo", Enum.KeyCode.Q, function()
     PowerEvent_upvr:FireServer("MassControl", Character_upvr, mouse_upvr.Target.Parent:FindFirstChild("HumanoidRootPart"))
 end)
 
-Section2:NewKeybind("Orbing", "KeybindInfo", Enum.KeyCode.X, function()
-	local LocalPlayer_upvr = game:GetService("Players").LocalPlayer
-	local mouse_upvr = LocalPlayer_upvr:GetMouse()
-	local PowerEvent_upvr = game:GetService("ReplicatedStorage"):WaitForChild("PowerEvents"):WaitForChild("Paige"):WaitForChild("PowerEvent")
-	PowerEvent_upvr:FireServer("Orbing", Character, mouse_upvr.Hit.Position)
+Section2:NewKeybind("HeartOrbing", "KeybindInfo", Enum.KeyCode.C, function()
+	local LocalPlayer = game.Players.LocalPlayer
+	local Character_upvr = LocalPlayer.Character
+	local mouse_upvr = LocalPlayer:GetMouse()
+	local PowerEvent_upvr = game:GetService("ReplicatedStorage").PowerEvents.Paige.PowerEvent
+	 PowerEvent_upvr:FireServer("HeartOrbing", Character_upvr, mouse_upvr.Target.Parent:FindFirstChild("HumanoidRootPart"))
 end)
 
-
+Section2:NewKeybind("ElectronicLift", "KeybindInfo", Enum.KeyCode.C, function()
+	local LocalPlayer = game.Players.LocalPlayer
+	local Character_upvr = LocalPlayer.Character
+	local mouse_upvr = LocalPlayer:GetMouse()
+	local PowerEvent_upvr = game:GetService("ReplicatedStorage").PowerEvents.Source.PowerEvent
+	PowerEvent_upvr:FireServer("ElectrokineticLift", Character_upvr, mouse_upvr.Target.Parent:FindFirstChild("HumanoidRootPart"))
+	PowerEvent_upvr:FireServer("ElectrokineticLift", Character_upvr, mouse_upvr.Target.Parent)
+end)
 
 
 
