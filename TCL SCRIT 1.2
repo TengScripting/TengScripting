@@ -109,6 +109,14 @@ Section2:NewKeybind("Mass Control", "KeybindInfo", Enum.KeyCode.R, function()
     PowerEvent_upvr:FireServer("MassControl", Character_upvr, mouse_upvr.Target.Parent:FindFirstChild("HumanoidRootPart"))
 end)
 
+Section2:NewKeybind("Prue AstralCombustion", "KeybindInfo", Enum.KeyCode.R, function()
+	local LocalPlayer = game.Players.LocalPlayer
+    local Character_upvr = LocalPlayer.Character
+    local mouse_upvr = LocalPlayer:GetMouse()
+    local PowerEvent_upvr = game:GetService("ReplicatedStorage").PowerEvents.L.PowerEvent
+    PowerEvent_upvr:FireServer("AstralCombust", Character_upvr, mouse_upvr.Target.Parent:FindFirstChild("HumanoidRootPart"))
+end)
+
 Section2:NewKeybind("HeartOrbing", "KeybindInfo", Enum.KeyCode.T, function()
 	local LocalPlayer = game.Players.LocalPlayer
 	local Character_upvr = LocalPlayer.Character
@@ -178,6 +186,6 @@ local Section5 = Tab5:NewSection("Abilities")
 Section5:NewKeybind("Toggle UI", "KeybindInfo", Enum.KeyCode.One, function()
 	Library:ToggleUI()
 end)
-Section5:NewButton("Prue", "ButtonInfo", function()
+Section5:NewButton("Remove BLUR", "ButtonInfo", function()
     game.Lighting.CharSelect:Destroy()
 end)
