@@ -40,6 +40,24 @@ end)
 local Tab2 = Window:NewTab("Powers")
 local Section2 = Tab2:NewSection("Abilities")
 
+Section2:NewKeybind("FireBeam", "KeybindInfo", Enum.KeyCode.M, function()
+local Character_upvr = game.Players.LocalPlayer.Character
+local PowerEvent_upvr = game:GetService("ReplicatedStorage").PowerEvents.Source.PowerEvent
+Local Debouce = false
+
+if Debouce == false then
+PowerEvent_upvr:FireServer("ForcefieldEnd", Character_upvr)
+Debouce = true
+end
+
+if Debouce == true then
+PowerEvent_upvr:FireServer("ForcefieldEnd", Character_upvr)
+Debouce = false
+end
+
+
+end)
+
 Section2:NewKeybind("Flaming", "KeybindInfo", Enum.KeyCode.Q, function()
   local LocalPlayer_upvr = game:GetService("Players").LocalPlayer
   local mouse_upvr = LocalPlayer_upvr:GetMouse()
@@ -60,19 +78,6 @@ Section2:NewKeybind("Disentigeration", "KeybindInfo", Enum.KeyCode.E, function()
     PowerEvent_upvr:FireServer("Disintegration", Character_upvr, mouse_upvr.Target.Parent:FindFirstChild("HumanoidRootPart"))
     PowerEvent_upvr1:FireServer("Disintegration", Character_upvr, mouse_upvr.Target.Parent:FindFirstChild("HumanoidRootPart"))
 end)
-
-
-Section2:NewKeybind("Disentigeration", "KeybindInfo", Enum.KeyCode.E, function()
-	local LocalPlayer = game.Players.LocalPlayer
-    local Character_upvr = LocalPlayer.Character
-    local mouse_upvr = LocalPlayer:GetMouse()
-    local PowerEvent_upvr = game:GetService("ReplicatedStorage").PowerEvents.Wyatt.PowerEvent
-    local PowerEvent_upvr1 = game:GetService("ReplicatedStorage").PowerEvents.Source.PowerEvent
-    PowerEvent_upvr:FireServer("Disintegration", Character_upvr, mouse_upvr.Target.Parent:FindFirstChild("HumanoidRootPart"))
-    PowerEvent_upvr1:FireServer("Disintegration", Character_upvr, mouse_upvr.Target.Parent:FindFirstChild("HumanoidRootPart"))
-end)
-
-
 
 
 Section2:NewKeybind("Mass Control", "KeybindInfo", Enum.KeyCode.R, function()
@@ -142,13 +147,6 @@ Section2:NewKeybind("Scream", "KeybindInfo", Enum.KeyCode.C, function()
 	local PowerEvent_upvr = game:GetService("ReplicatedStorage").PowerEvents.EvilPhoebe.PowerEvent
 	 PowerEvent_upvr:FireServer("Scream", Character_upvr)	
 end)
-
-Section2:NewKeybind("Beam Flame", "KeybindInfo", Enum.KeyCode.C, function()
-	local Character_upvr = game.Players.LocalPlayer.Character
-	local PowerEvent_upvr = game:GetService("ReplicatedStorage").PowerEvents.EvilPhoebe.PowerEvent
-	 PowerEvent_upvr:FireServer("Scream", Character_upvr)	
-end)
-
 
 
 local Tab5 = Window:NewTab("Settings")
