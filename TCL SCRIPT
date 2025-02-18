@@ -29,8 +29,8 @@ Section1:NewButton("Billie", "ButtonInfo", function()
     game.ReplicatedStorage.Events.Select:FireServer("Billie Jenkins")
 end)
 
-Section1:NewButton("Billie", "ButtonInfo", function()
-    game.ReplicatedStorage.Events.Select:FireServer("Billie Jenkins")
+Section1:NewButton("Melinda", "ButtonInfo", function()
+    game.ReplicatedStorage.Events.Select:FireServer("Melinda Warren")
 end)
 
 local Tab2 = Window:NewTab("Powers")
