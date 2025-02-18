@@ -40,17 +40,43 @@ end)
 local Tab2 = Window:NewTab("Powers")
 local Section2 = Tab2:NewSection("Abilities")
 
-Section2:NewKeybind("Source FourceField", "KeybindInfo", Enum.KeyCode.M, function(state)
+Section2:NewToggle("Source FireBeam", "ToggleInfo", function(state)
 local Character_upvr = game.Players.LocalPlayer.Character
 local PowerEvent_upvr = game:GetService("ReplicatedStorage").PowerEvents.Source.PowerEvent
-PowerEvent_upvr:FireServer("Scream", Character_upvr)
-
-if state then
-	PowerEvent_upvr:FireServer("Forcefield", Character_upvr)
-else
-	 PowerEvent_upvr:FireServer("ForcefieldEnd", Character_upvr)
-end
+    if state then
+        PowerEvent_upvr:FireServer("FireBeam", Character_upvr)
+    else
+        PowerEvent_upvr:FireServer("BeamEnd", Character_upvr)
+    end
 end)
+
+Section2:NewToggle("Dark Shield", "ToggleInfo", function(state)
+local Character_upvr = game.Players.LocalPlayer.Character
+local PowerEvent_upvr = game:GetService("ReplicatedStorage").PowerEvents.Agatha.PowerEvent
+    if state then
+        PowerEvent_upvr:FireServer("Forcefield", Character_upvr)
+    else
+        PowerEvent_upvr:FireServer("ForcefieldEnd", Character_upvr)
+    end
+end)
+
+
+Section2:NewToggle("Source Shield", "ToggleInfo", function(state)
+local Character_upvr = game.Players.LocalPlayer.Character
+local PowerEvent_upvr = game:GetService("ReplicatedStorage").PowerEvents.Source.PowerEvent
+    if state then
+        PowerEvent_upvr:FireServer("Forcefield", Character_upvr)
+    else
+        PowerEvent_upvr:FireServer("ForcefieldEnd", Character_upvr)
+    end
+end)
+
+Section2:NewKeybind("Repulse", "KeybindInfo", Enum.KeyCode.P, function()
+local Character_upvr = game.Players.LocalPlayer.Character
+local PowerEvent_upvr = game:GetService("ReplicatedStorage").PowerEvents.Agatha.PowerEvent
+PowerEvent_upvr:FireServer("Repulse", Character_upvr)
+end)
+
 
 
 Section2:NewKeybind("Flaming", "KeybindInfo", Enum.KeyCode.Q, function()
