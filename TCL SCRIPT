@@ -21,6 +21,18 @@ Section1:NewButton("Paige", "ButtonInfo", function()
     game.ReplicatedStorage.Events.Select:FireServer("Paige Matthews")
 end)
 
+Section1:NewButton("Christy", "ButtonInfo", function()
+    game.ReplicatedStorage.Events.Select:FireServer("Christy Jenkins")
+end)
+
+Section1:NewButton("Billie", "ButtonInfo", function()
+    game.ReplicatedStorage.Events.Select:FireServer("Billie Jenkins")
+end)
+
+Section1:NewButton("Billie", "ButtonInfo", function()
+    game.ReplicatedStorage.Events.Select:FireServer("Billie Jenkins")
+end)
+
 local Tab2 = Window:NewTab("Powers")
 local Section2 = Tab2:NewSection("Abilities")
 local PowerSection = Tab2:NewSection("Remove Your Abilities")
