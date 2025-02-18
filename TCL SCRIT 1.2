@@ -149,6 +149,19 @@ Section2:NewKeybind("Scream", "KeybindInfo", Enum.KeyCode.C, function()
 end)
 
 
+Section2:NewButton("Source Fourcefield", "ButtonInfo", function()
+    	local Character_upvr = game.Players.LocalPlayer.Character
+	local PowerEvent_upvr = game:GetService("ReplicatedStorage").PowerEvents.Prue.PowerEvent
+ 	PowerEvent_upvr:FireServer("Forcefield", Character_upvr)
+end)
+
+Section2:NewButton("Source Forcefield End", "ButtonInfo", function()
+    	local Character_upvr = game.Players.LocalPlayer.Character
+	local PowerEvent_upvr = game:GetService("ReplicatedStorage").PowerEvents.Prue.PowerEvent
+ 	PowerEvent_upvr:FireServer("ForefieldEnd", Character_upvr)
+end)
+
+
 local Tab5 = Window:NewTab("Settings")
 local Section5 = Tab5:NewSection("Abilities")
 
