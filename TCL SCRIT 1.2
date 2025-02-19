@@ -40,24 +40,44 @@ end)
 local Tab2 = Window:NewTab("Powers")
 local Section2 = Tab2:NewSection("Abilities")
 
-Section2:NewToggle("Source FireBeam", "ToggleInfo", function(state)
-local Character_upvr = game.Players.LocalPlayer.Character
-local PowerEvent_upvr = game:GetService("ReplicatedStorage").PowerEvents.Source.PowerEvent
-    if state then
-        PowerEvent_upvr:FireServer("FireBeam", Character_upvr)
-    else
-        PowerEvent_upvr:FireServer("BeamEnd", Character_upvr)
-    end
+Section2:NewLabel("Source Powers")
+
+Section2:NewKeybind("Disentigeration", "KeybindInfo", Enum.KeyCode.E, function()
+	  local LocalPlayer = game.Players.LocalPlayer
+    local Character_upvr = LocalPlayer.Character
+    local mouse_upvr = LocalPlayer:GetMouse()
+    local PowerEvent_upvr = game:GetService("ReplicatedStorage").PowerEvents.Wyatt.PowerEvent
+    local PowerEvent_upvr1 = game:GetService("ReplicatedStorage").PowerEvents.Source.PowerEvent
+    PowerEvent_upvr:FireServer("Disintegration", Character_upvr, mouse_upvr.Target.Parent:FindFirstChild("HumanoidRootPart"))
+    PowerEvent_upvr1:FireServer("Disintegration", Character_upvr, mouse_upvr.Target.Parent:FindFirstChild("HumanoidRootPart"))
 end)
 
-Section2:NewToggle("Dark Shield", "ToggleInfo", function(state)
-local Character_upvr = game.Players.LocalPlayer.Character
-local PowerEvent_upvr = game:GetService("ReplicatedStorage").PowerEvents.Agatha.PowerEvent
-    if state then
-        PowerEvent_upvr:FireServer("Forcefield", Character_upvr)
-    else
-        PowerEvent_upvr:FireServer("ForcefieldEnd", Character_upvr)
-    end
+Section2:NewKeybind("Mass Control", "KeybindInfo", Enum.KeyCode.R, function()
+	local LocalPlayer = game.Players.LocalPlayer
+    local Character_upvr = LocalPlayer.Character
+    local mouse_upvr = LocalPlayer:GetMouse()
+    local PowerEvent_upvr = game:GetService("ReplicatedStorage").PowerEvents.Source.PowerEvent
+    PowerEvent_upvr:FireServer("MassControl", Character_upvr, mouse_upvr.Target.Parent:FindFirstChild("HumanoidRootPart"))
+end)
+
+Section2:NewKeybind("Flaming", "KeybindInfo", Enum.KeyCode.Q, function()
+  local LocalPlayer_upvr = game:GetService("Players").LocalPlayer
+  local mouse_upvr = LocalPlayer_upvr:GetMouse()
+  local Character = LocalPlayer_upvr.Character
+  local PowerEvent_upvr = game:GetService("ReplicatedStorage"):WaitForChild("PowerEvents"):WaitForChild("EvilPhoebe"):WaitForChild("PowerEvent")
+  if true and not Character:FindFirstChild("Powerless") and not Character:GetAttribute("Enchantress") then
+     PowerEvent_upvr:FireServer("Flaming", Character, mouse_upvr.Hit.Position)
+    return
+end
+end)
+
+Section2:NewKeybind("ElectronicLift", "KeybindInfo", Enum.KeyCode.Y, function()
+	local LocalPlayer = game.Players.LocalPlayer
+	local Character_upvr = LocalPlayer.Character
+	local mouse_upvr = LocalPlayer:GetMouse()
+	local PowerEvent_upvr = game:GetService("ReplicatedStorage").PowerEvents.Source.PowerEvent
+	PowerEvent_upvr:FireServer("ElectrokineticLift", Character_upvr, mouse_upvr.Target.Parent:FindFirstChild("HumanoidRootPart"))
+	PowerEvent_upvr:FireServer("ElectrokineticLift", Character_upvr, mouse_upvr.Target.Parent)
 end)
 
 
@@ -71,50 +91,28 @@ local PowerEvent_upvr = game:GetService("ReplicatedStorage").PowerEvents.Source.
     end
 end)
 
-Section2:NewKeybind("Repulse", "KeybindInfo", Enum.KeyCode.P, function()
+Section2:NewToggle("Source FireBeam", "ToggleInfo", function(state)
 local Character_upvr = game.Players.LocalPlayer.Character
-local PowerEvent_upvr = game:GetService("ReplicatedStorage").PowerEvents.Agatha.PowerEvent
-PowerEvent_upvr:FireServer("Repulse", Character_upvr)
+local PowerEvent_upvr = game:GetService("ReplicatedStorage").PowerEvents.Source.PowerEvent
+    if state then
+        PowerEvent_upvr:FireServer("FireBeam", Character_upvr)
+    else
+        PowerEvent_upvr:FireServer("BeamEnd", Character_upvr)
+    end
 end)
 
+Section2:NewLabel("Prue Powers")
 
 
-Section2:NewKeybind("Flaming", "KeybindInfo", Enum.KeyCode.Q, function()
-  local LocalPlayer_upvr = game:GetService("Players").LocalPlayer
-  local mouse_upvr = LocalPlayer_upvr:GetMouse()
-  local Character = LocalPlayer_upvr.Character
-  local PowerEvent_upvr = game:GetService("ReplicatedStorage"):WaitForChild("PowerEvents"):WaitForChild("EvilPhoebe"):WaitForChild("PowerEvent")
-  if true and not Character:FindFirstChild("Powerless") and not Character:GetAttribute("Enchantress") then
-     PowerEvent_upvr:FireServer("Flaming", Character, mouse_upvr.Hit.Position)
-    return
+Section2:NewKeybind("Astral Combustion", "KeybindInfo", Enum.KeyCode.R, function()
+	local LocalPlayer = game.Players.LocalPlayer
+	local Character_upvr = LocalPlayer.Character
+	local mouse_upvr = LocalPlayer:GetMouse()
+	local PowerEvent_upvr = game:GetService("ReplicatedStorage").PowerEvents.Prue.PowerEvent
+	if true and Character_upvr.Ragdoll.Value == false and Character_upvr:GetAttribute("Empath") and mouse_upvr.Target and
+ 		mouse_upvr.Target.Parent:FindFirstChild("HumanoidRootPart") and not Character_upvr:FindFirstChild("Powerless") then
+    	 PowerEvent_upvr:FireServer("AstralCombust", Character_upvr, mouse_upvr.Target.Parent:FindFirstChild("HumanoidRootPart"))
 end
-end)
-
-Section2:NewKeybind("Disentigeration", "KeybindInfo", Enum.KeyCode.E, function()
-	  local LocalPlayer = game.Players.LocalPlayer
-    local Character_upvr = LocalPlayer.Character
-    local mouse_upvr = LocalPlayer:GetMouse()
-    local PowerEvent_upvr = game:GetService("ReplicatedStorage").PowerEvents.Wyatt.PowerEvent
-    local PowerEvent_upvr1 = game:GetService("ReplicatedStorage").PowerEvents.Source.PowerEvent
-    PowerEvent_upvr:FireServer("Disintegration", Character_upvr, mouse_upvr.Target.Parent:FindFirstChild("HumanoidRootPart"))
-    PowerEvent_upvr1:FireServer("Disintegration", Character_upvr, mouse_upvr.Target.Parent:FindFirstChild("HumanoidRootPart"))
-end)
-
-
-Section2:NewKeybind("Mass Control", "KeybindInfo", Enum.KeyCode.R, function()
-	local LocalPlayer = game.Players.LocalPlayer
-    local Character_upvr = LocalPlayer.Character
-    local mouse_upvr = LocalPlayer:GetMouse()
-    local PowerEvent_upvr = game:GetService("ReplicatedStorage").PowerEvents.Source.PowerEvent
-    PowerEvent_upvr:FireServer("MassControl", Character_upvr, mouse_upvr.Target.Parent:FindFirstChild("HumanoidRootPart"))
-end)
-
-Section2:NewKeybind("Prue AstralCombustion", "KeybindInfo", Enum.KeyCode.R, function()
-	local LocalPlayer = game.Players.LocalPlayer
-    local Character_upvr = LocalPlayer.Character
-    local mouse_upvr = LocalPlayer:GetMouse()
-    local PowerEvent_upvr = game:GetService("ReplicatedStorage").PowerEvents.L.PowerEvent
-    PowerEvent_upvr:FireServer("AstralCombust", Character_upvr, mouse_upvr.Target.Parent:FindFirstChild("HumanoidRootPart"))
 end)
 
 Section2:NewKeybind("HeartOrbing", "KeybindInfo", Enum.KeyCode.T, function()
@@ -123,15 +121,6 @@ Section2:NewKeybind("HeartOrbing", "KeybindInfo", Enum.KeyCode.T, function()
 	local mouse_upvr = LocalPlayer:GetMouse()
 	local PowerEvent_upvr = game:GetService("ReplicatedStorage").PowerEvents.Paige.PowerEvent
 	 PowerEvent_upvr:FireServer("HeartOrbing", Character_upvr, mouse_upvr.Target.Parent:FindFirstChild("HumanoidRootPart"))
-end)
-
-Section2:NewKeybind("ElectronicLift", "KeybindInfo", Enum.KeyCode.Y, function()
-	local LocalPlayer = game.Players.LocalPlayer
-	local Character_upvr = LocalPlayer.Character
-	local mouse_upvr = LocalPlayer:GetMouse()
-	local PowerEvent_upvr = game:GetService("ReplicatedStorage").PowerEvents.Source.PowerEvent
-	PowerEvent_upvr:FireServer("ElectrokineticLift", Character_upvr, mouse_upvr.Target.Parent:FindFirstChild("HumanoidRootPart"))
-	PowerEvent_upvr:FireServer("ElectrokineticLift", Character_upvr, mouse_upvr.Target.Parent)
 end)
 
 
