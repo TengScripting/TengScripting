@@ -199,12 +199,12 @@ end)
 
 Section2:NewLabel("Paige Matthews")
 
-Section2:NewKeybind("Orbing Throw", "ButtonInfo", Enum.KeyCode.Q, function()
+Section2:NewKeybind("Orbing", "ButtonInfo", Enum.KeyCode.Q, function()
 local LocalPlayer = game.Players.LocalPlayer
 local PowerEvent_upvr = game:GetService("ReplicatedStorage").PowerEvents.Paige.PowerEvent
 local mouse_upvr = LocalPlayer:GetMouse()
 local Character_upvr = LocalPlayer.Character
-PowerEvent_upvr:FireServer("Orbing", Character_upvr, mouse_upvr.Target.Parent:FindFirstChild("HumanoidRootPart"))
+PowerEvent_upvr:FireServer("Orbing", Character_upvr, mouse_upvr.Hit.Position)
 end)
 
 
