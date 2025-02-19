@@ -166,7 +166,11 @@ Section2:NewKeybind("Scream", "KeybindInfo", Enum.KeyCode.C, function()
 	 PowerEvent_upvr:FireServer("Scream", Character_upvr)	
 end)
 
-
+Section2:NewKeybind("Storm", "KeybindInfo", Enum.KeyCode.C, function()
+	local Character_upvr = game.Players.LocalPlayer.Character
+	local PowerEvent_upvr = game:GetService("ReplicatedStorage").PowerEvents.Enchantress.PowerEvent
+	 PowerEvent_upvr:FireServer("Storm", Character_upvr)	
+end)
 
 
 local Tab5 = Window:NewTab("Settings")
