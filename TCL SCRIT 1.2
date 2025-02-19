@@ -173,6 +173,18 @@ Section2:NewKeybind("Storm", "KeybindInfo", Enum.KeyCode.C, function()
 end)
 
 
+Section2:NewKeybind("Storm", "KeybindInfo", Enum.KeyCode.C, function(hold)
+local Character_upvr = game.Players.LocalPlayer.Character
+local mouse_upvr = LocalPlayer_upvr:GetMouse()
+local PowerEvent_upvr = game:GetService("ReplicatedStorage").PowerEvents.Prue.PowerEvent
+	if hold then
+ 		PowerEvent_upvr:FireServer("TKWave", Character_upvr, mouse_upvr.Target.Parent:FindFirstChild("HumanoidRootPart"))
+ 	else
+  		PowerEvent_upvr:FireServer("TKWaveEnd", Character_upvr, mouse_upvr.Target.Parent:FindFirstChild("HumanoidRootPart"))
+  	end
+end)
+
+
 local Tab5 = Window:NewTab("Settings")
 local Section5 = Tab5:NewSection("Abilities")
 
