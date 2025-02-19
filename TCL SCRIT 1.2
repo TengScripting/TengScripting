@@ -185,6 +185,19 @@ local PowerEvent_upvr = game:GetService("ReplicatedStorage").PowerEvents.Prue.Po
 end)
 
 
+Section2:NewToggle("Empathic Deflection", "ToggleInfo", function(state)
+local Character_upvr = game.Players.LocalPlayer.Character
+local PowerEvent_upvr = game:GetService("ReplicatedStorage").PowerEvents.Phoebe.PowerEvent
+Character_upvr:SetAttribute("Empath", true)
+Character_upvr:SetAttribute("EmpathaticDeflection", false)
+    if state then
+        PowerEvent_upvr:FireServer("Deflection", Character_upvr)
+    else
+        PowerEvent_upvr:FireServer("DeflectionEnd", Character_upvr)
+    end
+end)
+
+
 local Tab5 = Window:NewTab("Settings")
 local Section5 = Tab5:NewSection("Abilities")
 
