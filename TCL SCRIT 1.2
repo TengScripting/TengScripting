@@ -199,6 +199,14 @@ end)
 
 Section2:NewLabel("Paige Matthews")
 
+Section2:NewKeybind("Orbing Throw", "ButtonInfo", Enum.KeyCode.Q, function()
+local LocalPlayer = game.Players.LocalPlayer
+local PowerEvent_upvr = game:GetService("ReplicatedStorage").PowerEvents.Paige.PowerEvent
+local mouse_upvr = LocalPlayer:GetMouse()
+local Character_upvr = LocalPlayer.Character
+PowerEvent_upvr:FireServer("Orbing", Character_upvr, mouse_upvr.Target.Parent:FindFirstChild("HumanoidRootPart"))
+end)
+
 
 Section2:NewButton("Photonkinesis", "ButtonInfo", function()
 local LocalPlayer = game.Players.LocalPlayer
@@ -303,8 +311,18 @@ end)
 
 Section2:NewLabel("Phoebe Halliwell")
 
+Section2:NewKeybind("Empathic Replication", "ButtonInfo", Enum.KeyCode.P, function()
+local LocalPlayer = game.Players.LocalPlayer
+local Character_upvr = LocalPlayer.Character
+local mouse_upvr = LocalPlayer:GetMouse()
+local PowerEvent_upvr = game:GetService("ReplicatedStorage").PowerEvents.Phoebe.PowerEvent
+PowerEvent_upvr:FireServer("Replication", Character_upvr, mouse_upvr.Target.Parent:FindFirstChild("HumanoidRootPart"))
+end)
 
 
+--------Phoebe--------
+
+Section2:NewLabel("Phoebe Halliwell")
 
 local Tab5 = Window:NewTab("Settings")
 local Section5 = Tab5:NewSection("Abilities")
