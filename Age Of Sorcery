@@ -44,6 +44,14 @@ Section1:NewKeybind("Self Healing", "KeybindInfo", Enum.KeyCode.Q, function()
 	game.Players.LocalPlayer.ActiveSpell.Value = "Self Healing"
 end)
 
+Section1:NewKeybind("Earthquake", "KeybindInfo", Enum.KeyCode.B, function()
+	game.ReplicatedStorage.SpellRemotes.Earthquake:FireServer()
+end)
+
+Section1:NewKeybind("Fire Storm", "KeybindInfo", Enum.KeyCode.B, function()
+	game.ReplicatedStorage.SpellRemotes.Firestorm:FireServer()
+end)
+
 
 
 
