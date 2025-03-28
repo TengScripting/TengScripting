@@ -53,6 +53,15 @@ Section1:NewKeybind("Fire Storm", "KeybindInfo", Enum.KeyCode.B, function()
 end)
 
 
+local Tab2 = Window:NewTab("Settings")
+local Section2 = Tab2:NewSection("Settings")
+
+
+Section2:NewKeybind("Toggle GUI", "KeybindInfo", Enum.KeyCode.Zero, function()
+	Library:ToggleUI()
+end)
+
+
 
 
 
