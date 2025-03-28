@@ -52,6 +52,14 @@ Section1:NewKeybind("Fire Storm", "KeybindInfo", Enum.KeyCode.B, function()
 	game.ReplicatedStorage.SpellRemotes.Firestorm:FireServer()
 end)
 
+Section1:NewKeybind("Self Heal", "KeybindInfo", Enum.KeyCode.B, function()
+	game.ReplicatedStorage.SpellRemotes.SelfHeal:FireServer()
+end)
+
+Section1:NewKeybind("Soul Crash", "KeybindInfo", Enum.KeyCode.B, function()
+	game.ReplicatedStorage.SpellRemotes.SoulCrash:FireServer()
+end)
+
 
 local Tab2 = Window:NewTab("Settings")
 local Section2 = Tab2:NewSection("Settings")
