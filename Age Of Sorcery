@@ -1,0 +1,57 @@
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
+local Window = Library.CreateLib("Age Of Sorcery by TENGSCRIPT", "DarkTheme")
+
+local Tab1 = Window:NewTab("SpellCast")
+local Section1 = Tab1:NewSection("Keybinds")
+
+Section1:NewKeybind("Fireball", "KeybindInfo", Enum.KeyCode.Q, function()
+	game.Players.LocalPlayer.ActiveSpell.Value = "Fireball"
+end)
+
+Section1:NewKeybind("Earth Boulder", "KeybindInfo", Enum.KeyCode.Q, function()
+	game.Players.LocalPlayer.ActiveSpell.Value = "Earth Boulder"
+end)
+
+Section1:NewKeybind("Water Sling", "KeybindInfo", Enum.KeyCode.Q, function()
+	game.Players.LocalPlayer.ActiveSpell.Value = "Water Sling"
+end)
+
+Section1:NewKeybind("Earth Pillar", "KeybindInfo", Enum.KeyCode.Q, function()
+	game.Players.LocalPlayer.ActiveSpell.Value = "Earth Pillar"
+end)
+
+Section1:NewKeybind("Fire Pillar", "KeybindInfo", Enum.KeyCode.Q, function()
+	game.Players.LocalPlayer.ActiveSpell.Value = "Fire Pillar"
+end)
+
+Section1:NewKeybind("Lightning Strike", "KeybindInfo", Enum.KeyCode.Q, function()
+	game.Players.LocalPlayer.ActiveSpell.Value = "Lightning Strike"
+end)
+
+Section1:NewKeybind("Fire Barrier", "KeybindInfo", Enum.KeyCode.Q, function()
+	game.Players.LocalPlayer.ActiveSpell.Value = "Fire Barrier"
+end)
+
+Section1:NewKeybind("Lightning Bolt", "KeybindInfo", Enum.KeyCode.Q, function()
+	game.Players.LocalPlayer.ActiveSpell.Value = "Lightning Bolt"
+end)
+
+Section1:NewKeybind("Healing", "KeybindInfo", Enum.KeyCode.Q, function()
+	game.Players.LocalPlayer.ActiveSpell.Value = "Healing"
+end)
+
+Section1:NewKeybind("Self Healing", "KeybindInfo", Enum.KeyCode.Q, function()
+	game.Players.LocalPlayer.ActiveSpell.Value = "Self Healing"
+end)
+
+
+
+
+
+
+
+
+
+
+
+
