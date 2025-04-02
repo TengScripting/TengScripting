@@ -37,6 +37,14 @@ Section1:NewButton("Aviva", "ButtonInfo", function()
     game.ReplicatedStorage.Events.Select:FireServer("Aviva")
 end)
 
+Section1:NewButton("Source", "ButtonInfo", function()
+    game.ReplicatedStorage.Events.Select:FireServer("The Source")
+end)
+
+Section1:NewButton("Enchantress", "ButtonInfo", function()
+    game.ReplicatedStorage.Events.Select:FireServer("The Enchantress")
+end)
+
 local Tab2 = Window:NewTab("Powers")
 local Section2 = Tab2:NewSection("Abilities")
 
@@ -349,7 +357,7 @@ Section2:NewKeybind("AdvancedIncenerate", "ButtonInfo", Enum.KeyCode.P, function
 local LocalPlayer = game.Players.LocalPlayer
 local Character_upvr = LocalPlayer.Character
 local mouse_upvr = LocalPlayer:GetMouse()
-local PowerEvent_upvr = game:GetService("ReplicatedStorage").PowerEvents.Source.PowerEvent
+local PowerEvent_upvr = game:GetService("ReplicatedStorage").PowerEvents.Christy.PowerEvent
 PowerEvent_upvr:FireServer("AdvancedIncenerate", Character_upvr, mouse_upvr.Target.Parent:FindFirstChild("HumanoidRootPart"))
 end)
 
@@ -357,16 +365,16 @@ Section2:NewKeybind("TelepathicPain", "ButtonInfo", Enum.KeyCode.P, function()
 local LocalPlayer = game.Players.LocalPlayer
 local Character_upvr = LocalPlayer.Character
 local mouse_upvr = LocalPlayer:GetMouse()
-local PowerEvent_upvr = game:GetService("ReplicatedStorage").PowerEvents.Source.PowerEvent
+local PowerEvent_upvr = game:GetService("ReplicatedStorage").PowerEvents.Christy.PowerEvent
 PowerEvent_upvr:FireServer("TelepathicPain", Character_upvr, mouse_upvr.Target.Parent:FindFirstChild("HumanoidRootPart"))
 end)
 
 Section2:NewKeybind("ChristyOutburst", "ButtonInfo", Enum.KeyCode.P, function()
 local LocalPlayer = game.Players.LocalPlayer
-local Character_upvr = LocalPlayer.Character
+local PowerEvent_upvr = game:GetService("ReplicatedStorage").PowerEvents.Christy.PowerEvent
 local mouse_upvr = LocalPlayer:GetMouse()
-local PowerEvent_upvr = game:GetService("ReplicatedStorage").PowerEvents.Source.PowerEvent
-PowerEvent_upvr:FireServer("ChristyOutburst", Character_upvr, mouse_upvr.Target.Parent:FindFirstChild("HumanoidRootPart"))
+local Character_upvr = LocalPlayer.Character
+PowerEvent_upvr:FireServer("TelepathicPain", Character_upvr, mouse_upvr.Target.Parent:FindFirstChild("HumanoidRootPart"))
 end)
 --------Phoebe--------
 
