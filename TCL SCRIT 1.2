@@ -307,19 +307,67 @@ local Character_upvr = LocalPlayer.Character
 PowerEvent_upvr:FireServer("RemoteOrbing", Character_upvr, mouse_upvr.Target.Parent:FindFirstChild("HumanoidRootPart"))
 end)
 
---------Phoebe--------
+--------Source--------
 
-Section2:NewLabel("Phoebe Halliwell")
+Section2:NewLabel("Source")
 
-Section2:NewKeybind("Empathic Replication", "ButtonInfo", Enum.KeyCode.P, function()
+Section2:NewKeybind("Disintegration", "ButtonInfo", Enum.KeyCode.P, function()
 local LocalPlayer = game.Players.LocalPlayer
 local Character_upvr = LocalPlayer.Character
 local mouse_upvr = LocalPlayer:GetMouse()
-local PowerEvent_upvr = game:GetService("ReplicatedStorage").PowerEvents.Phoebe.PowerEvent
-PowerEvent_upvr:FireServer("Replication", Character_upvr, mouse_upvr.Target.Parent:FindFirstChild("HumanoidRootPart"))
+local PowerEvent_upvr = game:GetService("ReplicatedStorage").PowerEvents.Source.PowerEvent
+PowerEvent_upvr:FireServer("Disintegration", Character_upvr, mouse_upvr.Target.Parent:FindFirstChild("HumanoidRootPart"))
 end)
 
+Section2:NewKeybind("Flaming", "ButtonInfo", Enum.KeyCode.Q, function()
+local LocalPlayer = game.Players.LocalPlayer
+local PowerEvent_upvr = game:GetService("ReplicatedStorage").PowerEvents.EvilPhoebe.PowerEvent
+local mouse_upvr = LocalPlayer:GetMouse()
+local Character_upvr = LocalPlayer.Character
+PowerEvent_upvr:FireServer("Flaming", Character_upvr, mouse_upvr.Hit.Position)
+end)
 
+Section2:NewKeybind("LightningStrike", "ButtonInfo", Enum.KeyCode.P, function()
+local LocalPlayer = game.Players.LocalPlayer
+local Character_upvr = LocalPlayer.Character
+local mouse_upvr = LocalPlayer:GetMouse()
+local PowerEvent_upvr = game:GetService("ReplicatedStorage").PowerEvents.Source.PowerEvent
+PowerEvent_upvr:FireServer("LightningStrike", Character_upvr, mouse_upvr.Target.Parent:FindFirstChild("HumanoidRootPart"))
+end)
+
+Section2:NewKeybind("MassControl", "ButtonInfo", Enum.KeyCode.P, function()
+local LocalPlayer = game.Players.LocalPlayer
+local Character_upvr = LocalPlayer.Character
+local mouse_upvr = LocalPlayer:GetMouse()
+local PowerEvent_upvr = game:GetService("ReplicatedStorage").PowerEvents.Source.PowerEvent
+PowerEvent_upvr:FireServer("MassControl", Character_upvr, mouse_upvr.Target.Parent:FindFirstChild("HumanoidRootPart"))
+end)
+
+Section2:NewLabel("Christy Jenkins")
+
+Section2:NewKeybind("AdvancedIncenerate", "ButtonInfo", Enum.KeyCode.P, function()
+local LocalPlayer = game.Players.LocalPlayer
+local Character_upvr = LocalPlayer.Character
+local mouse_upvr = LocalPlayer:GetMouse()
+local PowerEvent_upvr = game:GetService("ReplicatedStorage").PowerEvents.Source.PowerEvent
+PowerEvent_upvr:FireServer("AdvancedIncenerate", Character_upvr, mouse_upvr.Target.Parent:FindFirstChild("HumanoidRootPart"))
+end)
+
+Section2:NewKeybind("TelepathicPain", "ButtonInfo", Enum.KeyCode.P, function()
+local LocalPlayer = game.Players.LocalPlayer
+local Character_upvr = LocalPlayer.Character
+local mouse_upvr = LocalPlayer:GetMouse()
+local PowerEvent_upvr = game:GetService("ReplicatedStorage").PowerEvents.Source.PowerEvent
+PowerEvent_upvr:FireServer("TelepathicPain", Character_upvr, mouse_upvr.Target.Parent:FindFirstChild("HumanoidRootPart"))
+end)
+
+Section2:NewKeybind("ChristyOutburst", "ButtonInfo", Enum.KeyCode.P, function()
+local LocalPlayer = game.Players.LocalPlayer
+local Character_upvr = LocalPlayer.Character
+local mouse_upvr = LocalPlayer:GetMouse()
+local PowerEvent_upvr = game:GetService("ReplicatedStorage").PowerEvents.Source.PowerEvent
+PowerEvent_upvr:FireServer("ChristyOutburst", Character_upvr, mouse_upvr.Target.Parent:FindFirstChild("HumanoidRootPart"))
+end)
 --------Phoebe--------
 
 Section2:NewLabel("Phoebe Halliwell")
