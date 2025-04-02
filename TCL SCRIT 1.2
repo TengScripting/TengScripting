@@ -369,13 +369,38 @@ local PowerEvent_upvr = game:GetService("ReplicatedStorage").PowerEvents.Christy
 PowerEvent_upvr:FireServer("TelepathicPain", Character_upvr, mouse_upvr.Target.Parent:FindFirstChild("HumanoidRootPart"))
 end)
 
-Section2:NewKeybind("ChristyOutburst", "ButtonInfo", Enum.KeyCode.P, function()
+Section2:NewKeybind("EmmaShield", "ButtonInfo", Enum.KeyCode.P, function()
 local LocalPlayer = game.Players.LocalPlayer
-local PowerEvent_upvr = game:GetService("ReplicatedStorage").PowerEvents.Christy.PowerEvent
+local PowerEvent_upvr = game:GetService("ReplicatedStorage").PowerEvents.Emma.PowerEvent
 local mouse_upvr = LocalPlayer:GetMouse()
 local Character_upvr = LocalPlayer.Character
-PowerEvent_upvr:FireServer("TelepathicPain", Character_upvr, mouse_upvr.Target.Parent:FindFirstChild("HumanoidRootPart"))
+PowerEvent_upvr:FireServer("EmmaShield", Character_upvr, mouse_upvr.Target.Parent:FindFirstChild("HumanoidRootPart"))
 end)
+
+Section2:NewKeybind("Repulse", "ButtonInfo", Enum.KeyCode.P, function()
+local LocalPlayer = game.Players.LocalPlayer
+local PowerEvent_upvr = game:GetService("ReplicatedStorage").PowerEvents.Agatha.PowerEvent
+local mouse_upvr = LocalPlayer:GetMouse()
+local Character_upvr = LocalPlayer.Character
+PowerEvent_upvr:FireServer("Repulse", Character_upvr, mouse_upvr.Target.Parent:FindFirstChild("HumanoidRootPart"))
+end)
+
+Section2:NewKeybind("FireBeam", "ButtonInfo", Enum.KeyCode.P, function()
+local LocalPlayer = game.Players.LocalPlayer
+local PowerEvent_upvr = game:GetService("ReplicatedStorage").PowerEvents.Billie.PowerEvent
+local mouse_upvr = LocalPlayer:GetMouse()
+local Character_upvr = LocalPlayer.Character
+PowerEvent_upvr:FireServer("FireBeam", Character_upvr, mouse_upvr.Target.Parent:FindFirstChild("HumanoidRootPart"))
+end)
+
+Section1:NewButton("FireBeamEND", "ButtonInfo", function()
+local LocalPlayer = game.Players.LocalPlayer
+local PowerEvent_upvr = game:GetService("ReplicatedStorage").PowerEvents.Billie.PowerEvent
+local mouse_upvr = LocalPlayer:GetMouse()
+local Character_upvr = LocalPlayer.Character
+PowerEvent_upvr:FireServer("FireBeamEnd", Character_upvr, mouse_upvr.Target.Parent:FindFirstChild("HumanoidRootPart"))
+end)
+
 --------Phoebe--------
 
 Section2:NewLabel("Phoebe Halliwell")
