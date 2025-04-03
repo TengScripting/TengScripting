@@ -407,7 +407,7 @@ local Character_upvr = LocalPlayer.Character
 PowerEvent_upvr:FireServer("FireBeamEnd", Character_upvr, mouse_upvr.Target.Parent:FindFirstChild("HumanoidRootPart"))
 end)
 
-Section2:NewButton("Ressurection", "ButtonInfo", function()
+Section2:NewKeybind("TelepathicPain", "ButtonInfo", Enum.KeyCode.P, function()
 local LocalPlayer = game.Players.LocalPlayer
 local PowerEvent_upvr = game:GetService("ReplicatedStorage").PowerEvents.Brina.PowerEvent
 local mouse_upvr = LocalPlayer:GetMouse()
