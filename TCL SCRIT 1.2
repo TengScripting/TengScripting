@@ -423,6 +423,22 @@ local mouse_upvr = LocalPlayer:GetMouse()
 local Character_upvr = LocalPlayer.Character
 PowerEvent_upvr:FireServer("Conjuration", Character_upvr, mouse_upvr.Target.Parent:FindFirstChild("HumanoidRootPart"))
 end)
+
+Section2:NewKeybind("CageEntrapment", "ButtonInfo", Enum.KeyCode.P, function()
+local LocalPlayer = game.Players.LocalPlayer
+local PowerEvent_upvr = game:GetService("ReplicatedStorage").PowerEvents.Seer.PowerEvent
+local mouse_upvr = LocalPlayer:GetMouse()
+local Character_upvr = LocalPlayer.Character
+PowerEvent_upvr:FireServer("CageEntrapment", Character_upvr, mouse_upvr.Target.Parent:FindFirstChild("HumanoidRootPart"))
+end)
+
+Section2:NewKeybind("Ignite", "ButtonInfo", Enum.KeyCode.P, function()
+local LocalPlayer = game.Players.LocalPlayer
+local PowerEvent_upvr = game:GetService("ReplicatedStorage").PowerEvents.Brina.PowerEvent
+local mouse_upvr = LocalPlayer:GetMouse()
+local Character_upvr = LocalPlayer.Character
+PowerEvent_upvr:FireServer("Ignite", Character_upvr, mouse_upvr.Target.Parent:FindFirstChild("HumanoidRootPart"))
+end)
 --------Phoebe--------
 
 Section2:NewLabel("Phoebe Halliwell")
