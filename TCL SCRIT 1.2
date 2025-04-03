@@ -399,7 +399,7 @@ local Character_upvr = LocalPlayer.Character
 PowerEvent_upvr:FireServer("Repulse", Character_upvr, mouse_upvr.Target.Parent:FindFirstChild("HumanoidRootPart"))
 end)
 
-Section2:NewKeybind("FireBeam", "ButtonInfo", Enum.KeyCode.P, function()
+Section2:NewKeybind("Source FireBeam", "ButtonInfo", Enum.KeyCode.P, function()
 local LocalPlayer = game.Players.LocalPlayer
 local PowerEvent_upvr = game:GetService("ReplicatedStorage").PowerEvents.Source.PowerEvent
 local mouse_upvr = LocalPlayer:GetMouse()
@@ -407,9 +407,25 @@ local Character_upvr = LocalPlayer.Character
 PowerEvent_upvr:FireServer("FireBeam", Character_upvr, mouse_upvr.Target.Parent:FindFirstChild("HumanoidRootPart"))
 end)
 
-Section2:NewButton("FireBeamEND", "ButtonInfo", function()
+Section2:NewButton("Source FireBeamEND", "ButtonInfo", function()
 local LocalPlayer = game.Players.LocalPlayer
 local PowerEvent_upvr = game:GetService("ReplicatedStorage").PowerEvents.Source.PowerEvent
+local mouse_upvr = LocalPlayer:GetMouse()
+local Character_upvr = LocalPlayer.Character
+PowerEvent_upvr:FireServer("BeamEnd", Character_upvr, mouse_upvr.Target.Parent:FindFirstChild("HumanoidRootPart"))
+end)
+
+Section2:NewKeybind("Billie FireBeam", "ButtonInfo", Enum.KeyCode.P, function()
+local LocalPlayer = game.Players.LocalPlayer
+local PowerEvent_upvr = game:GetService("ReplicatedStorage").PowerEvents.Billie.PowerEvent
+local mouse_upvr = LocalPlayer:GetMouse()
+local Character_upvr = LocalPlayer.Character
+PowerEvent_upvr:FireServer("FireBeam", Character_upvr, mouse_upvr.Target.Parent:FindFirstChild("HumanoidRootPart"))
+end)
+
+Section2:NewButton("Billie FireBeamEND", "ButtonInfo", function()
+local LocalPlayer = game.Players.LocalPlayer
+local PowerEvent_upvr = game:GetService("ReplicatedStorage").PowerEvents.Billie.PowerEvent
 local mouse_upvr = LocalPlayer:GetMouse()
 local Character_upvr = LocalPlayer.Character
 PowerEvent_upvr:FireServer("BeamEnd", Character_upvr, mouse_upvr.Target.Parent:FindFirstChild("HumanoidRootPart"))
