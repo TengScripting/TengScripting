@@ -374,7 +374,7 @@ PowerEvent_upvr:FireServer("TelepathicPain", Character_upvr, mouse_upvr.Target.P
 end)
 
 
-Section1:NewButton("EmmaShield", "ButtonInfo", function()
+Section2:NewButton("EmmaShield", "ButtonInfo", function()
 local LocalPlayer = game.Players.LocalPlayer
 local PowerEvent_upvr = game:GetService("ReplicatedStorage").PowerEvents.Emma.PowerEvent
 local mouse_upvr = LocalPlayer:GetMouse()
@@ -383,7 +383,7 @@ PowerEvent_upvr:FireServer("EmmaShield", Character_upvr, mouse_upvr.Target.Paren
 end)
 
 
-Section1:NewButton("Repulse", "ButtonInfo", function()
+Section2:NewButton("Repulse", "ButtonInfo", function()
 local LocalPlayer = game.Players.LocalPlayer
 local PowerEvent_upvr = game:GetService("ReplicatedStorage").PowerEvents.Agatha.PowerEvent
 local mouse_upvr = LocalPlayer:GetMouse()
@@ -399,7 +399,7 @@ local Character_upvr = LocalPlayer.Character
 PowerEvent_upvr:FireServer("FireBeam", Character_upvr, mouse_upvr.Target.Parent:FindFirstChild("HumanoidRootPart"))
 end)
 
-Section1:NewButton("FireBeamEND", "ButtonInfo", function()
+Section2:NewButton("FireBeamEND", "ButtonInfo", function()
 local LocalPlayer = game.Players.LocalPlayer
 local PowerEvent_upvr = game:GetService("ReplicatedStorage").PowerEvents.Billie.PowerEvent
 local mouse_upvr = LocalPlayer:GetMouse()
