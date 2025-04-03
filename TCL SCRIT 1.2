@@ -499,5 +499,5 @@ Section5:NewKeybind("Toggle UI", "KeybindInfo", Enum.KeyCode.One, function()
 	Library:ToggleUI()
 end)
 Section5:NewButton("Remove BLUR", "ButtonInfo", function()
-    game.Lighting.CharSelect:Destroy()
+    game.Lighting.CharSelect.Size = 0
 end)
