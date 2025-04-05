@@ -480,12 +480,12 @@ local Character_upvr = LocalPlayer.Character
 PowerEvent_upvr:FireServer("IceMetamorphosis", Character_upvr, mouse_upvr.Target.Parent:FindFirstChild("HumanoidRootPart"))
 end)
 
-Section2:NewKeybind("LocketEntrapment", "ButtonInfo", Enum.KeyCode.P, function()
+Section2:NewKeybind("FireThrowing", "ButtonInfo", Enum.KeyCode.P, function()
 local LocalPlayer = game.Players.LocalPlayer
-local PowerEvent_upvr = game:GetService("ReplicatedStorage").PowerEvents.Melinda.PowerEvent
+local PowerEvent_upvr = game:GetService("ReplicatedStorage").PowerEvents.EvilPhoebe.PowerEvent
 local mouse_upvr = LocalPlayer:GetMouse()
 local Character_upvr = LocalPlayer.Character
-PowerEvent_upvr:FireServer("LocketEntrapment", Character_upvr, mouse_upvr.Target.Parent:FindFirstChild("HumanoidRootPart"))
+PowerEvent_upvr:FireServer("FireThrowing", Character_upvr, mouse_upvr.Target.Parent:FindFirstChild("HumanoidRootPart"))
 end)
 
 --------Phoebe--------
