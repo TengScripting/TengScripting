@@ -39,7 +39,7 @@ char:SetAttribute("BeamStrenghtMultiplier", txt)
 end)
 
 local Tab3 = Window:NewTab("Settings")
-local Section3 = Tab2:NewSection("Settings")
+local Section3 = Tab3:NewSection("Settings")
 Section3:NewKeybind("ToggleUI", "KeybindInfo", Enum.KeyCode.Zero, function()
 	Library:ToggleUI()
 end)
