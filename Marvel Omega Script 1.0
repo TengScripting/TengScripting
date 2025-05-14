@@ -1,0 +1,41 @@
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
+local Window = Library.CreateLib("Marvel Omega SCRIPT", "DarkTheme")
+local Tab1 = Window:NewTab("Main")
+local Section1 = Tab1:NewSection("Free Chars")
+
+
+Section1:NewButton("UnlockAllChars", "Not All Can be unlock make sure you buy the character before free use their skins or comestics", function()
+local Player = game.Players.LocalPlayer
+local PlayerData = Player.PlayerData
+
+PlayerData:SetAttribute("OwnsAllCharacters", true)
+PlayerData:SetAttribute("Developer", true)
+PlayerData:SetAttribute("Moderator", true)
+PlayerData:SetAttribute("ServerOwner", true)
+PlayerData:SetAttribute("TesterExclusiveSkins", true)
+end)
+
+local Tab2 = Window:NewTab("Ability Stuff")
+local Section2 = Tab2:NewSection("Settings")
+
+Section2:NewTextBox("Flight Speed", "Change you fly speed", function(txt)
+local char = game.Players.LocalPlayer.Character
+char:SetAttribute("FlightSpeed", txt)
+end)
+
+Section2:NewTextBox("Projectile Size", "Change your projectile Size ", function(txt)
+local char = game.Players.LocalPlayer.Character
+char:SetAttribute("ProjectileSizeModifier", txt)
+end)
+
+Section2:NewTextBox("Projectile Speed", "Change your projectile speed", function(txt)
+local char = game.Players.LocalPlayer.Character
+char:SetAttribute("ProjectileSpeedModifier", txt)
+end)
+
+local Tab3 = Window:NewTab("Ability Stuff")
+local Section3 = Tab3:NewSection("Settings")
+
+Section3:NewKeybind("ToggleUI", "KeybindInfo", Enum.KeyCode.Zero, function()
+	Library:ToggleUI()
+end)
