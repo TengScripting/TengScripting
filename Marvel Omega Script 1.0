@@ -33,8 +33,7 @@ local char = game.Players.LocalPlayer.Character
 char:SetAttribute("ProjectileSpeedModifier", txt)
 end)
 
-local Tab3 = Window:NewTab("Ability Stuff")
-local Section3 = Tab3:NewSection("Settings")
+local Tab3 = Window:NewTab("Settings")
 
 Section3:NewKeybind("ToggleUI", "KeybindInfo", Enum.KeyCode.Zero, function()
 	Library:ToggleUI()
